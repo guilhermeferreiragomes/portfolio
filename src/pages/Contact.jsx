@@ -44,7 +44,7 @@ const Contact = () => {
               color: '#120F17',
             }}
           >
-            {copied ? 'Copiado!' : 'Copiar'}
+            {copied ? 'Copied!' : 'Copy'}
           </span>
         </button>
       </div>
