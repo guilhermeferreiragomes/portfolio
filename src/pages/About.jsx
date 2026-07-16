@@ -3,19 +3,21 @@ import profilePic from "../assets/profilePic.jpg";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FiDownload, FiCheck } from 'react-icons/fi';
+import PixelCard from '../components/PixelCard';
 
 const About = () => {
   const [downloaded, setDownloaded] = useState(false)
 
   const handleDownloadClick = () => {
     setDownloaded(true)
-    setTimeout(() => setDownloaded(false), 1500)
+    setTimeout(() => setDownloaded(false), 2000)
   }
 
   return (
     <div className='flex flex-row items-center gap-10 w-max h-max p-10'>
 
-      <div className='w-64 flex flex-col items-center justify-center p-6 border border-amber-50/30 rounded-3xl gap-2'>
+        <PixelCard variant="default" className='absolute z-0'>      
+        <div className='relative z-10 w-64 flex flex-col items-center justify-center p-6 gap-2'>
         <img src={profilePic} className='w-40 h-40 rounded-full object-cover' alt="Guilherme Gomes" />
         <p className='pt-3 text-xl font-bold text-white text-center'>Guilherme Gomes</p>
         <p className='text-base font-light text-white/50'>University Student</p>
@@ -28,7 +30,7 @@ const About = () => {
           style={{
             transform: downloaded ? 'scale(0.95)' : 'scale(1)',
             backgroundColor: downloaded ? '#22c55e' : '#1a191b',
-            borderColor: downloaded ? '#22c55e' : 'rgba(255, 250, 235, 0.5)',
+            borderColor: downloaded ? '#22c55e' : '#4a4550',
             color: downloaded ? '#120F17' : '#ffffff',
           }}
         >
@@ -36,6 +38,7 @@ const About = () => {
           {downloaded ? 'Downloaded!' : 'Download CV'}
         </a>
       </div>
+      </PixelCard>
 
       <div className='flex-1 text-left'>
         <h2 className='text-white text-5xl font-extrabold mb-6'>About Me</h2>

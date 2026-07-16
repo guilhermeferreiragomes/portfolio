@@ -21,11 +21,11 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((project, index) => (
-            <div key={index} className="flex flex-col bg-[#1a191b] border border-amber-50/10 rounded-3xl overflow-hidden hover:border-amber-500 transition-all group">
+            <div key={index} className="flex flex-col bg-[#1a191b] border border-amber-50/10 rounded-3xl overflow-hidden hover:border-[#b7a0e5] transition-all group">
     
                 {/* Imagem */}
                 <div className="h-64 overflow-hidden">
-                    <img src={project.image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={project.image} className="w-full h-full object-cover transition-transform duration-500" />
                 </div>
 
                 {/* Conteúdo */}
@@ -45,12 +45,12 @@ const Projects = () => {
                     {/* Links */}
                     <div className="mt-auto flex gap-4 pt-4">
                         {project.githubUrl && (
-                            <a href={project.githubUrl} target="_blank" className="flex items-center gap-2 text-white hover:text-amber-500 transition-colors">
+                            <a href={project.githubUrl} target="_blank" className="flex items-center gap-2 text-white hover:text-[#b7a0e5] transition-colors">
                                 <FiGithub /> Code
                             </a>
                         )}
                         {project.liveUrl && (
-                            <a href={project.liveUrl} target="_blank" className="flex items-center gap-2 text-white hover:text-amber-500 transition-colors">
+                            <a href={project.liveUrl} target="_blank" className="flex items-center gap-2 text-white hover:text-[#b7a0e5] transition-colors">
                                 <FiExternalLink /> Live Demo
                             </a>
                         )}
